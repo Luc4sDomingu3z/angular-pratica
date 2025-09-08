@@ -60,11 +60,26 @@
       <div class="banner-section-info">
         <h2>Ford Territory, 2025</h2>
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet cupiditate 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet cupiditate
+          <div class="banner-info-action">
+            <button (pointerup)="bannerIconChange($event)" type="button">
+              <ion-icon size="large" name="arrow-back"></ion-icon>
+              <span></span>
+            </button>
+          </div>
         </span>
-        <div>
-          
-        </div>
+
+        <article class="banner-info-more">
+          <div class="banner-info-more-card" aria-label="card">
+            <div class="banner-info-card__img">
+              <img width="100" src="" alt="">
+            </div>
+            <section class="banner-info-card__info">
+              <strong>Territory</strong>
+              <a href=""></a>
+            </section>
+          </div>
+        </article>
       </div>
 
     </section>

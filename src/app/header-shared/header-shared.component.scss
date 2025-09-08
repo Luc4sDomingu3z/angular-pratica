@@ -39,7 +39,7 @@
   text-decoration: none;
   padding: 0.45rem 1rem;
   border-radius: 7px;
-  transition: 400ms ease-out;
+  transition: 120ms ease-out;
 
   &::before {
     content: '';
@@ -48,16 +48,16 @@
     bottom: 0;
     left: 0;
     border-bottom: 2px solid colors.$palatinate-blue;
-    transition: all 400ms ease-in;
+    transition: all 200ms ease-out;
   }
 
   &:hover {
-    background-color: #fff;
-    color: colors.$neon-blue;
+    color: colors.$vista-blue;
+    transform: scale(0.96);
   }
 
   &:hover::before {
-    width: 100%;
+    width: 50%;
   }
 }
 

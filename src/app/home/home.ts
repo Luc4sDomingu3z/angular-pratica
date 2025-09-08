@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { IonIcon } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  imports: [RouterLink],
+  imports: [RouterLink, IonIcon],
 })
 export class Home {
   untouchImg(e: Event) {
@@ -16,5 +17,10 @@ export class Home {
         if (imgEvent.detail === 2) imgEvent.preventDefault();
       });
     }
+  }
+
+  public bannerIconChange(el: PointerEvent): void {
+    console.log(el);
+    return;
   }
 }
