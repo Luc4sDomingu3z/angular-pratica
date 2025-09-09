@@ -8,9 +8,9 @@ import * as iconsName from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
+  imports: [HeaderSharedComponent, FooterSharedComponent, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [HeaderSharedComponent, FooterSharedComponent, RouterOutlet],
 })
 export class App {
   protected readonly title = signal('projeto-angular-app');

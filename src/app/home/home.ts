@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, input } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { IonIcon } from '@ionic/angular/standalone';
+import { User } from '../user/user';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  imports: [RouterLink, IonIcon],
+  imports: [IonIcon, RouterLink, User],
 })
 export class Home {
+
   untouchImg(e: Event) {
     const target = e.target as HTMLElement;
     const image: HTMLImageElement | null = target.querySelector('img');
@@ -19,8 +21,19 @@ export class Home {
     }
   }
 
-  public bannerIconChange(el: PointerEvent): void {
-    console.log(el);
+  public bannerIconChange(e: PointerEvent): void {
+    if (e.target === null) return
+    const btnTarget: HTMLButtonElement | null = e.target as HTMLButtonElement
+    let parentDiv: HTMLDivElement | null = btnTarget.parentElement as HTMLDivElement
+    const icon = btnTarget.querySelector('ion-icon')
+
+    parentDiv = parentDiv.parentElement?.parentElement as HTMLDivElement
+    if (parentDiv === null || icon === null || !parentDiv.classList.contains('banner-section-info')) return;
+
+    parentDiv.classList.toggle('toggle-banner-section');
+    icon.name = (parentDiv.classList.contains('toggle-banner-section')) ? 'arrow-forward' : 'arrow-back';
+    console.log(parentDiv)
+
     return;
   }
 }

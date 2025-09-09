@@ -1,11 +1,9 @@
 <main id="mainHome" class="main-container">
   <section class="section-slide-container">
     <div (click)="untouchImg($event)" class="slide-img">
-      <img
-        width="200"
+      <img width="200"
         src="https://cdn.motor1.com/images/mgl/L3kkPl/s1/lancamento-ford-mustang-de-setima-geracao-no-brasil.jpg"
-        alt="Mustang"
-      />
+        alt="Mustang" />
     </div>
   </section>
 
@@ -27,10 +25,7 @@
               <a routerLink="user">Saiba mais</a>
             </div>
           </div>
-          <img
-            src="https://www.deceroacien.com.mx/u/fotografias/m/2023/6/21/f1280x720-22552_154227_5050.jpg"
-            alt=""
-          />
+          <img src="https://www.deceroacien.com.mx/u/fotografias/m/2023/6/21/f1280x720-22552_154227_5050.jpg" alt="" />
         </div>
 
         <div class="topic-div">
@@ -56,15 +51,77 @@
   </section>
   <section class="banners-section-container">
     <section class="banner-section">
-      <img width="100" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsL3ZBNVEfAAA8NWSR9RGHnumnHr1Metgj03GpTRpvmdcg5ESAYW5dB-pXHxut4ZYmts6p24Tf3SXnAuhZzxZoXSsJdgbrrJKW8XNDBwd8Ep7sG9ZKjRZW4-iruKKZIBQR3Y3Fuv1pGxVanVbFO4EVZkh0pHpqhkcldYfxe11QG_sxQO66kB_HWsq0Vg/s2260/Ford-Territory-2027.jpg" alt="">
+      <img width="100"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsL3ZBNVEfAAA8NWSR9RGHnumnHr1Metgj03GpTRpvmdcg5ESAYW5dB-pXHxut4ZYmts6p24Tf3SXnAuhZzxZoXSsJdgbrrJKW8XNDBwd8Ep7sG9ZKjRZW4-iruKKZIBQR3Y3Fuv1pGxVanVbFO4EVZkh0pHpqhkcldYfxe11QG_sxQO66kB_HWsq0Vg/s2260/Ford-Territory-2027.jpg"
+        alt="">
       <div class="banner-section-info">
         <h2>Ford Territory, 2025</h2>
         <span>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet cupiditate
           <div class="banner-info-action">
             <button (pointerup)="bannerIconChange($event)" type="button">
-              <ion-icon size="large" name="arrow-back"></ion-icon>
-              <span></span>
+              <ion-icon name="arrow-back" size="large"></ion-icon>
+              <!-- <span></span> -->
+            </button>
+          </div>
+        </span>
+
+        <article class="banner-info-more">
+          <div class="banner-info-more-card" aria-label="card">
+            <div class="banner-info-card__img">
+              <img width="100"
+                src="https://d1hv7ee95zft1i.cloudfront.net/custom/car-model-color-photo/gallery/ford-territory-lustrous-grey-6446b3984c557.jpg"
+                alt="">
+            </div>
+            <section class="banner-info-card__info">
+              <strong>Territory</strong>
+              <a href="#">Ver carro</a>
+            </section>
+          </div>
+          <div class="banner-info-more-card" aria-label="card">
+            <div class="banner-info-card__img">
+              <img width="100"
+                src="https://d1hv7ee95zft1i.cloudfront.net/custom/car-model-color-photo/gallery/ford-territory-lustrous-grey-6446b3984c557.jpg"
+                alt="">
+            </div>
+            <section class="banner-info-card__info">
+              <strong>Territory</strong>
+              <a href="#">Ver carro</a>
+            </section>
+          </div>
+          <div class="banner-info-more-card" aria-label="card">
+            <div class="banner-info-card__img">
+              <img width="100"
+                src="https://d1hv7ee95zft1i.cloudfront.net/custom/car-model-color-photo/gallery/ford-territory-lustrous-grey-6446b3984c557.jpg"
+                alt="">
+            </div>
+            <section class="banner-info-card__info">
+              <strong>Territory</strong>
+              <a href="#">Ver carro</a>
+            </section>
+          </div>
+        </article>
+      </div>
+
+    </section>
+
+    <div class="banner-section-blur">
+
+      <h1>Título massa no meio</h1>
+
+      <app-user></app-user>
+    </div>
+
+    <section class="banner-section">
+      <img width="100" src="https://cdn.motor1.com/images/mgl/P3nLMK/s1/2024-ford-mustang-dark-horse.jpg" alt="">
+      <div class="banner-section-info">
+        <h2>Mustang Dark Horse, 2024</h2>
+        <span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet cupiditate
+          <div class="banner-info-action">
+            <button (pointerup)="bannerIconChange($event)" type="button">
+              <ion-icon name="arrow-back" size="large"></ion-icon>
+              <!-- <span></span> -->
             </button>
           </div>
         </span>
@@ -80,20 +137,6 @@
             </section>
           </div>
         </article>
-      </div>
-
-    </section>
-
-    <div class="banner-section-blur">
-
-      <h1>Título massa no meio</h1>
-
-    </div>
-
-    <section class="banner-section">
-      <img width="100" src="https://cdn.motor1.com/images/mgl/P3nLMK/s1/2024-ford-mustang-dark-horse.jpg" alt="">
-      <div class="banner-section-info">
-        <h2>Mustang Dark Horse, 2024</h2>
       </div>
     </section>
   </section>
