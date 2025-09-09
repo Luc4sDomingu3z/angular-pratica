@@ -21,6 +21,7 @@ body {
   grid-template-columns: 1fr;
   background-color: #fff;
   font-family: fonts.$Roboto;
+  overflow-x: hidden;
 }
 
 .main-container {

@@ -7,10 +7,9 @@ import { User } from '../user/user';
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  imports: [IonIcon, RouterLink, User],
+  imports: [IonIcon, RouterLink],
 })
 export class Home {
-
   untouchImg(e: Event) {
     const target = e.target as HTMLElement;
     const image: HTMLImageElement | null = target.querySelector('img');
@@ -22,17 +21,20 @@ export class Home {
   }
 
   public bannerIconChange(e: PointerEvent): void {
-    if (e.target === null) return
-    const btnTarget: HTMLButtonElement | null = e.target as HTMLButtonElement
-    let parentDiv: HTMLDivElement | null = btnTarget.parentElement as HTMLDivElement
-    const icon = btnTarget.querySelector('ion-icon')
+    if (e.target === null) return;
+    const btnTarget: HTMLButtonElement | null = e.target as HTMLButtonElement;
+    let parentDiv: HTMLDivElement | null = btnTarget.parentElement as HTMLDivElement;
+    const icon = btnTarget.querySelector('ion-icon');
 
-    parentDiv = parentDiv.parentElement?.parentElement as HTMLDivElement
-    if (parentDiv === null || icon === null || !parentDiv.classList.contains('banner-section-info')) return;
+    parentDiv = parentDiv.parentElement?.parentElement as HTMLDivElement;
+    if (parentDiv === null || icon === null || !parentDiv.classList.contains('banner-section-info'))
+      return;
 
     parentDiv.classList.toggle('toggle-banner-section');
-    icon.name = (parentDiv.classList.contains('toggle-banner-section')) ? 'arrow-forward' : 'arrow-back';
-    console.log(parentDiv)
+    icon.name = parentDiv.classList.contains('toggle-banner-section')
+      ? 'arrow-forward'
+      : 'arrow-back';
+    console.log(parentDiv);
 
     return;
   }
