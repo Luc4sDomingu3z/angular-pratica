@@ -1,8 +1,7 @@
-@use '../../scss-styles/colors.scss';
+@use '../../../scss-styles/colors.scss';
 
 .header {
   width: 100%;
-  /* background-color: colors.$international-klein-blue; */
   background-color: #00000030;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);

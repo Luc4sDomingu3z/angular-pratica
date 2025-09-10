@@ -1,8 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { addIcons } from 'ionicons';
-import { HeaderSharedComponent } from './header-shared/header-shared.component';
-import { FooterSharedComponent } from './footer-shared/footer-shared.component';
+import { HeaderSharedComponent } from './components/header-shared/header-shared.component';
+import { FooterSharedComponent } from './components/footer-shared/footer-shared.component';
 
 import * as iconsName from 'ionicons/icons';
 
@@ -14,9 +14,8 @@ import * as iconsName from 'ionicons/icons';
 })
 export class App {
   protected readonly title = signal('projeto-angular-app');
+  
   constructor() {
     addIcons(iconsName);
   }
-
-  public showHeader: boolean = true;
 }
