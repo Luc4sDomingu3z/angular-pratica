@@ -12,7 +12,4 @@ export class FooterSharedComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-
-  public showFooter: boolean = false
 }

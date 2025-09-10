@@ -1,11 +1,34 @@
 
 <main id="mainAdminLogin" class="main-container">
-  <section class="">
+  <section class="admin-login-section">
+    <div class="admin-login-img">
+      <img src="https://www.carscoops.com/wp-content/uploads/2022/09/Ford-Mustang-Racing-1536x832.jpg" alt="">
+    </div>
     <form action="./validateUser" method="post" class="admin-login-form">
-      <fieldset>
-        <div>
-          <label for=""></label>
-          <input type="text">
+      <fieldset class="form-group">
+        <div class="field-input">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <div class="field-input">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div class="field-input">
+          <label for="rememberMe">Remember Me:</label>
+          <input type="checkbox" name="rememberMe" id="rememberMe">
+        </div>
+        <div class="field-input">
+          <label for="submit">Submit:</label>
+          <input type="submit" value="Login">
+        </div>
+        <div class="field-input">
+          <label for="reset">Reset:</label>
+          <input type="reset" value="Reset">
+        </div>
+        <div class="field-input">
+          <label for="cancel">Cancel:</label>
+          <input type="button" value="Cancel" onclick="window.location.href='/'">
         </div>
       </fieldset>
     </form>

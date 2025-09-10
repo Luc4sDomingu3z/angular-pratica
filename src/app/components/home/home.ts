@@ -1,13 +1,14 @@
 import { Component, input } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { IonIcon } from '@ionic/angular/standalone';
-import { User } from '../user/user';
+import { HeaderSharedComponent } from '../header-shared/header-shared.component';
+import { FooterSharedComponent } from '../footer-shared/footer-shared.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.html',
   styleUrl: './home.scss',
-  imports: [IonIcon, RouterLink],
+  imports: [IonIcon, RouterLink, HeaderSharedComponent, FooterSharedComponent],
 })
 export class Home {
   untouchImg(e: Event) {

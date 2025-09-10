@@ -2,15 +2,28 @@
 
 .header {
   width: 100%;
+  min-height: 50px;
   background-color: #00000030;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   position: fixed;
   z-index: 5;
   top: 0;
+
+  &:hover {
+    background-color: #fff;
+    min-height: 80px;
+    transition: all 200ms ease-out;
+  }
+
+  &:hover .header-nav-container a {
+    color: #323232;
+    transition: 200ms ease;
+  }
 }
 
 .header-nav-container {
+  margin: auto 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;

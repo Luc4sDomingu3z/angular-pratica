@@ -1,0 +1,48 @@
+@use '../../../../scss-styles/colors.scss';
+@use '../../../../scss-styles/fonts.scss';
+
+main.main-container#mainAdminLogin {
+  background: colors.$gradient-bottom-right !important;
+  height: 100%;
+  display: grid;
+}
+
+.admin-login-section {
+  width: 100%;
+  background-color: colors.$neon-blue;
+  max-width: 890px;
+  aspect-ratio: 16/9;
+  margin: auto;
+  display: flex;
+}
+
+.admin-login-img {
+  width: 100%;
+  flex-basis: 500px;
+  position: relative;
+
+  & > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.admin-login-form {
+  flex-grow: 1;
+  aspect-ratio: 12/16;
+  background-color: #fff;
+  border-radius: 12px;
+  border: none;
+  transform: scale(0.98);
+  padding: 1rem;
+
+  & .form-group,
+  fieldset {
+    border: none;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
