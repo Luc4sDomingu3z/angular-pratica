@@ -7,7 +7,7 @@ import { IonIcon } from '@ionic/angular/standalone';
   selector: 'app-header-shared',
   templateUrl: './header-shared.component.html',
   styleUrls: ['./header-shared.component.scss'],
-  imports: [IonIcon, RouterLink],
+  imports: [IonIcon, RouterLink]
 })
 export class HeaderSharedComponent implements OnInit {
   constructor() {}

@@ -2,14 +2,25 @@
 @use '../../../../scss-styles/fonts.scss';
 
 main.main-container#mainAdminLogin {
-  background: colors.$gradient-bottom-right !important;
+  // background: colors.$gradient-bottom-right;
+  background: #041c24;
+  // background: linear-gradient(124deg, rgba(4, 28, 36, 1) 0%, rgba(0, 88, 196, 1) 40%, rgba(117, 117, 217, 1) 96%);
+  // background: #ffffff;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(184, 184, 184, 1) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100%;
   display: grid;
 }
 
 .admin-login-section {
   width: 100%;
-  background-color: colors.$neon-blue;
+  border-radius: 10px;
+  
+  background: #fff;
+  // border: 13px solid #fff;
+  background-image: url('/img/blurred-image-login.png') no-repeat left; 
   max-width: 890px;
   aspect-ratio: 16/9;
   margin: auto;
@@ -18,8 +29,12 @@ main.main-container#mainAdminLogin {
 
 .admin-login-img {
   width: 100%;
+  border-radius: 15px;
+  transform: scale(1.02);
+  overflow: hidden;
   flex-basis: 500px;
   position: relative;
+  box-shadow: 6px 0px 1rem #00000080;
 
   & > img {
     position: absolute;
@@ -31,18 +46,113 @@ main.main-container#mainAdminLogin {
 }
 
 .admin-login-form {
+  color: #fff;
   flex-grow: 1;
-  aspect-ratio: 12/16;
-  background-color: #fff;
+  aspect-ratio: 9/12;
+  max-height: 430px;
+  margin: auto;
+  background-color: colors.$neon-blue;
+  filter: drop-shadow(1.2rem 1.2rem 0px colors.$international-klein-blue);
   border-radius: 12px;
   border: none;
-  transform: scale(0.98);
+  box-shadow: 4px 0px 10px #00000050;
+  transform: scale(1) translateX(-20%);
   padding: 1rem;
+  overflow-y: auto;
+
+  > h1 {
+    user-select: none;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: fonts.$RobotoCon;
+    font-weight: 900;
+  }
 
   & .form-group,
   fieldset {
+    width: 100%;
     border: none;
     display: flex;
     flex-flow: column nowrap;
+    row-gap: 28px;
+  }
+
+  .field-input {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2px;
+    width: 100%;
+
+    label {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 3px;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    input:not([type="button"]) {
+      border: none;
+      background-color: #fff;
+      padding: 0.56rem;
+      border-radius: 4px;
+      outline: 0px solid colors.$neon-blue;
+      transition: outline 100ms ease-out;
+      &:focus {
+        outline: 2px solid colors.$international-klein-blue;
+        outline-offset: 2px;
+      }
+      &::placeholder {
+        font-family: monospace;
+        opacity: 50%;
+      }
+    }
+    button {
+      outline: none;
+      background-color: #18ce91;
+      font-size: 1.3rem;
+      border: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      font-family: monospace;
+      justify-content: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 200 !important;
+      width: 100%;
+      max-width: 100%;
+      min-height: 20px;
+      padding: 5px;
+      border-radius: 3px;
+      margin: auto;
+      transition: 120ms ease-out;
+
+      &:hover {
+        background-color: rgb(87, 247, 87);
+      }
+    }
+  }
+  .field-input.--btns {
+    flex-flow: row;
+    gap: 4px;
+  }
+  .field-input.--remember-me {
+    position: relative;
+    width: 100%;
+    max-width: max-content;
+
+    label {
+      padding: 3px;
+      display: flex;
+      flex-flow: row nowrap;
+      column-gap: 3px;
+      font-family: monospace;
+      font-size: 1rem;
+      align-items: center;
+      > * {
+        pointer-events: none;
+        user-select: none;
+      }
+    }
   }
 }

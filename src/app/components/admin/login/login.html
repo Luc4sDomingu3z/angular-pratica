@@ -1,34 +1,39 @@
-
 <main id="mainAdminLogin" class="main-container">
   <section class="admin-login-section">
     <div class="admin-login-img">
-      <img src="https://www.carscoops.com/wp-content/uploads/2022/09/Ford-Mustang-Racing-1536x832.jpg" alt="">
+      <img src="/img/mustangs.jpg" alt="">
     </div>
     <form action="./validateUser" method="post" class="admin-login-form">
+      <h1>Entrar na conta</h1>
       <fieldset class="form-group">
         <div class="field-input">
-          <label for="username">Username:</label>
+          <label for="username">
+            <ion-icon name="person-circle-outline" size="large"></ion-icon>
+            Username:
+          </label>
           <input type="text" name="username" id="username" placeholder="Username">
         </div>
         <div class="field-input">
-          <label for="password">Password:</label>
-          <input type="password" name="password" id="password" placeholder="Password">
+          <label for="password">
+            <ion-icon name="key-outline" size="large"></ion-icon>
+            Password:
+          </label>
+          <input type="password" [formControl]="password" id="password" placeholder="****">
         </div>
-        <div class="field-input">
-          <label for="rememberMe">Remember Me:</label>
-          <input type="checkbox" name="rememberMe" id="rememberMe">
+        <div class="field-input --remember-me">
+          <label  for="rememberMe">
+            <span>Lembrar-me</span>
+            <ion-icon name="checkbox-outline"></ion-icon>
+          </label>
+          <input (change)="checkRemember($event)" hidden type="checkbox" name="rememberMe" id="rememberMe">
         </div>
-        <div class="field-input">
-          <label for="submit">Submit:</label>
-          <input type="submit" value="Login">
-        </div>
-        <div class="field-input">
-          <label for="reset">Reset:</label>
-          <input type="reset" value="Reset">
-        </div>
-        <div class="field-input">
-          <label for="cancel">Cancel:</label>
-          <input type="button" value="Cancel" onclick="window.location.href='/'">
+        <div class="field-input --btns">
+          <button type="button" (submit)="validateForm($event)" (click)="validateForm($event)">
+            <ion-icon name="log-in" size="large"></ion-icon>
+          </button>
+          <button type="button" onclick="window.location.href='/'">
+            <ion-icon name="refresh" size="large"></ion-icon>
+          </button>
         </div>
       </fieldset>
     </form>
