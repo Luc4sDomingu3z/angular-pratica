@@ -30,5 +30,6 @@ export class Login implements OnInit {
     console.log(this.password.value)
   }
 
+  public logado: boolean = true
   // private val
 }
