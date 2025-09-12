@@ -1,0 +1,18 @@
+.main-container#adminDashboard {
+  width: 100%;
+  max-width: 98%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  box-shadow: 0px 2px 13px #00000020;
+  // outline: 1px solid red;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  background-color: #fdfdfd;
+  display: grid !important  ;
+  grid-template-columns: minmax(120px, max-content) 1fr;
+  gap: 0.2rem;
+}
+
+.dashboard-sidebar {
+  padding: 0.3rem;
+}
