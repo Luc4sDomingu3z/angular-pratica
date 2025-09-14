@@ -35,65 +35,7 @@
 
   <!-- Content -->
   <section class="dashboard-content">
-    <!--Vehicles Section-->
-    <section class="dashboard-section">
-      <h1>Veículos</h1>
-
-      <div class="">
-        <section class="">
-          <div>
-            <button type="button">
-              <ion-icon name="refresh" size="small"></ion-icon>
-              <span>Sincronizar Veículas</span>
-            </button>
-          </div>
-          <div>
-            <button type="button">
-              <ion-icon name="add" size="small"></ion-icon>
-              <span>Criar Veículo</span>
-            </button>
-          </div>
-        </section>
-        <article class="car-selected-area" aria-label="Area do veiculo selecionado">
-          <form action="" method="get" class="car-form-selection">
-            <fieldset>
-              <div>
-                <label for="cars">Carros da Ford</label>
-                <select name="cars" id="cars" aria-label="Carros da Ford">
-                  <option value="394830#929FD">Mustang 2025</option>
-                  <option value="394830#929FE">Mustang 2026</option>
-                  <option value="394830#929FF">Mustang 2027</option>
-                </select>
-              </div>
-            </fieldset>
-          </form>
-
-          <section class="car-data-section" aria-label="Dados do carro">
-            <div class="car-image-container" aria-label="Car image">
-              <span aria-label="id">394830#929FD</span>
-              <img src="https://www.thedrive.com/wp-content/uploads/2022/09/15/ford-mustang-2024.jpeg?auto=webp" alt="" />
-            </div>
-            <div class="car-datas">
-              <div>
-                <h2>modelo</h2>
-                <p>Mustang Dark Horse</p>
-              </div>
-              <div>
-                <h2>ano</h2>
-                <p>2025</p>
-              </div>
-              <div>
-                <h2>Cor</h2>
-                <p>Preto</p>
-              </div>
-            </div>
-          </section>
-        </article>
-        <dialog class="dashboard-form-container">
-          <form action=""></form>
-        </dialog>
-      </div>
-    </section>
+    <app-vehicle-adm></app-vehicle-adm>
     <!--Users Section-->
     <section class="dashboard-section"></section>
     <!--Panel Section-->

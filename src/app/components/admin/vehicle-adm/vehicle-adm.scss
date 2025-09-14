@@ -1,0 +1,184 @@
+@use '../../../../scss-styles/colors.scss';
+@use '../../../../scss-styles/fonts.scss';
+
+.car-selected-area {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(100px, 300px) minmax(300px, 1fr);
+  gap: 8px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+form.car-form-selection {
+  width: 100%;
+  > fieldset {
+    border: none;
+    > div {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 5px;
+
+      > select {
+        padding: 1rem;
+        border-radius: 6px;
+        font-size: 1em;
+      }
+    }
+  }
+}
+.car-data-section {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 5px;
+  margin: 10px auto;
+
+  .car-image-container {
+    width: 100%;
+    /* max-width: 700px; */
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      padding: 5px;
+      user-select: all;
+      border-radius: 20px;
+      background-color: #fff;
+      color: colors.$neon-blue;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      user-select: none;
+      pointer-events: none;
+      border-radius: 10px;
+    }
+  }
+
+  .car-datas {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 3px;
+    column-gap: 5px;
+
+    div {
+      flex: 1;
+      border-radius: 8px;
+      padding: 7px;
+      background-color: #fff;
+      border: 1px solid #dedede;
+
+      > h2 {
+        font-weight: 200;
+        font-size: 1.2rem;
+        padding: 4px;
+        border-radius: 5px;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        margin-bottom: 8px;
+        background-color: colors.$risd-blue;
+      }
+      > p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #333;
+      }
+    }
+  }
+}
+
+.dashboard-form-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+  position: fixed;
+  border-radius: 0.56rem;
+  border: 1px solid #dedede;
+  padding: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  > h1 {
+    font-weight: 200;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #dadada;
+  }
+
+  > form {
+    width: 100%;
+    border: none;
+
+    fieldset {
+      border: none;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 10px;
+      margin: 8px auto;
+
+      & div {
+        flex-basis: 200px;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2px;
+        position: relative;
+
+        label {
+          font-size: 1.34rem;
+          display: block;
+          font-weight: 200;
+          font-family: fonts.$RobotoCon;
+          margin-bottom: 2px;
+        }
+
+        input {
+          width: 100%;
+          background-color: #fff;
+          border: 1px solid #bbbbbb;
+          padding: 6px;
+          text-indent: 3px;
+          border-radius: 4px;
+          font-size: 1.24rem;
+          font-family: monospace;
+        }
+      }
+
+      > button {
+        background-color: #aaeea2;
+        border: none;
+        padding: 4px 1rem;
+        border-radius: 6px;
+        margin: 4px 0;
+        width: 100%;
+        max-width: 120px;
+        font-size: 1.2rem;
+        color: #323232;
+
+        &:hover {
+          background-color: #88d888;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-form-container::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
