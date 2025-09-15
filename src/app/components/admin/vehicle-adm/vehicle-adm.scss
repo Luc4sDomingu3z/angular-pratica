@@ -30,10 +30,55 @@ form.car-form-selection {
 }
 .car-data-section {
   width: 100%;
-  display: flex;
-  flex-flow: column wrap;
+  // display: flex;
+  // flex-flow: column wrap;
+  display: grid;
+  grid-template-columns: minmax(150px, max-content) 1fr;
   gap: 5px;
   margin: 10px auto;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .car-data-top {
+    padding: 0.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 5px;
+
+    div {
+      height: auto;
+      padding: 0.34rem;
+      border-radius: 8px;
+      background-color: #fafafa;
+      color: #545454;
+      display: flex;
+      font-family: fonts.$Quicksand;
+      justify-content: space-between;
+
+      > h2 {
+        padding: 5px 0;
+        font-size: 1.2rem;
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        margin-top: auto;
+      }
+
+      > div p {
+        width: max-content;
+        color: colors.$neon-blue;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 8px;
+        background-color: #fff;
+      }
+    }
+  }
 
   .car-image-container {
     width: 100%;
@@ -63,10 +108,15 @@ form.car-form-selection {
 
   .car-datas {
     width: 100%;
+    grid-column: span 2;
     display: flex;
     flex-flow: row wrap;
     row-gap: 3px;
     column-gap: 5px;
+    row-gap: 7px;
+    @media (max-width: 700px) {
+      grid-column: 1;
+    }
 
     div {
       flex: 1;
@@ -74,20 +124,28 @@ form.car-form-selection {
       padding: 7px;
       background-color: #fff;
       border: 1px solid #dedede;
+      font-family: fonts.$Quicksand;
 
       > h2 {
-        font-weight: 200;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        user-select: none;
+        // font-weight: 200;
         font-size: 1.2rem;
         padding: 4px;
-        border-radius: 5px;
+        // border-radius: 5px;
         width: 100%;
         text-align: left;
-        color: #fff;
+        text-transform: capitalize;
+        color: #545454;
         margin-bottom: 8px;
-        background-color: colors.$risd-blue;
+        border-bottom: 1px solid colors.$risd-blue;
+        // background-color: colors.$risd-blue;
       }
       > p {
-        font-size: 1rem;
+        user-select: all;
+        font-size: 0.8rem;
         line-height: 1.5;
         color: #333;
       }

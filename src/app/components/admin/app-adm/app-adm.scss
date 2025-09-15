@@ -11,7 +11,7 @@
   aspect-ratio: 16/8;
   border-radius: 1rem;
   background-color: #fdfdfd;
-  display: grid !important  ;
+  display: grid !important;
   grid-template-columns: minmax(120px, max-content) 1fr;
   gap: 0.2rem;
 }
