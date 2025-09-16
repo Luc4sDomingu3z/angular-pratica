@@ -55,6 +55,12 @@
         font-family: fonts.$RobotoCon;
         transition: color 300ms ease-out, transform 90ms ease-out;
 
+        > span {
+          @media (max-width: 600px) {
+            display: none;
+          }
+        }
+
         &:hover {
           color: colors.$palatinate-blue;
           transform: scale(1.04);

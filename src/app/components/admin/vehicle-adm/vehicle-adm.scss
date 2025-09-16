@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(100px, 300px) minmax(300px, 1fr);
+  grid-template-columns: minmax(100px, 200px) minmax(400px, 100%);
   gap: 8px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -44,7 +44,9 @@ form.car-form-selection {
   .car-data-top {
     padding: 0.25rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // align-items: start;
+    justify-content: start;
     gap: 5px;
 
     div {
@@ -54,16 +56,35 @@ form.car-form-selection {
       background-color: #fafafa;
       color: #545454;
       display: flex;
+      flex-flow: column nowrap;
       font-family: fonts.$Quicksand;
       justify-content: space-between;
 
+      @media (min-width: 490px) and (max-width: 696px) {
+
+        &:last-child {
+          grid-column: span 2;
+        }
+
+        & {
+          flex-flow: column nowrap;
+        }
+      }
+
       > h2 {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         padding: 5px 0;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
       }
 
       > div {
+        width: 100%;
         display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
         align-items: center;
         gap: 2px;
         margin-top: auto;
