@@ -30,8 +30,6 @@ form.car-form-selection {
 }
 .car-data-section {
   width: 100%;
-  // display: flex;
-  // flex-flow: column wrap;
   display: grid;
   grid-template-columns: minmax(150px, max-content) 1fr;
   gap: 5px;

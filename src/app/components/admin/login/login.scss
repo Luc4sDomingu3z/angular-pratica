@@ -1,6 +1,8 @@
 @use '../../../../scss-styles/colors.scss';
 @use '../../../../scss-styles/fonts.scss';
 
+
+
 main.main-container#mainAdminLogin {
   // background: colors.$gradient-bottom-right;
   background: #041c24;
@@ -17,10 +19,10 @@ main.main-container#mainAdminLogin {
 .admin-login-section {
   width: 100%;
   border-radius: 10px;
-  
+
   background: #fff;
   // border: 13px solid #fff;
-  background-image: url('/img/blurred-image-login.png') no-repeat left; 
+  background-image: url('/img/blurred-image-login.png') no-repeat left;
   max-width: 890px;
   aspect-ratio: 16/9;
   margin: auto;
@@ -152,6 +154,42 @@ main.main-container#mainAdminLogin {
       > * {
         pointer-events: none;
         user-select: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main.main-container#mainAdminLogin {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+
+    .admin-login-section {
+      width: 100%;
+      outline: 1px solid yellow;
+      transform: none;
+      height: 100%;
+
+      .admin-login-img {
+        width: 10%;
+        display: none;
+        transform: none;
+        > img {
+          position: static;
+          width: 100%;
+          inset: none;
+        }
+      }
+
+      .admin-login-form {
+        width: 100%;
+        height: 100%;
+        max-width: 600px;
+        filter: none;
+        transform: none;
+        margin: auto;
       }
     }
   }
