@@ -17,7 +17,7 @@
             <span>Users</span>
           </a>
         </li>
-        <li>
+      <li>
           <a href="dashboard/panel">
             <ion-icon name="settings"></ion-icon>
             <span>Panel</span>
@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <div class="sibebar-btn-container">
-      <button type="button" class="sidebar-btn">
+      <button type="button" class="sidebar-btn" (pointerup)="sidebarCollapse()">
         <ion-icon name="caret-back"></ion-icon>
       </button>
     </div>

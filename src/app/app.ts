@@ -18,4 +18,5 @@ export class App {
   constructor() {
     addIcons(iconsName);
   }
+
 }

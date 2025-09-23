@@ -259,3 +259,9 @@ form.car-form-selection {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
+
+@media (max-width: 500px) {
+  .dashboard-form-container {
+    aspect-ratio: 0;
+  }
+}

@@ -10,5 +10,12 @@ import { VehicleAdm } from '../vehicle-adm/vehicle-adm';
   styleUrl: './app-adm.scss'
 })
 export class AppAdm {
+  
+  sidebarCollapse() {
+    const sideBar = document.querySelector('.dashboard-sidebar')
+    if (sideBar === null) return;
 
+    console.log('oi')
+    sideBar.classList.toggle('collapse')
+  }
 }
