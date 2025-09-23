@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeAd } from './app-adm';
+import { AppAdm } from './app-adm';
 
-describe('HomeAd', () => {
-  let component: HomeAd;
-  let fixture: ComponentFixture<HomeAd>;
+describe('AppAdm', () => {
+  let component: AppAdm;
+  let fixture: ComponentFixture<AppAdm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HomeAd]
+      imports: [AppAdm]
     })
-    .compileComponents();
+      .compileComponents();
 
-    fixture = TestBed.createComponent(HomeAd);
+    fixture = TestBed.createComponent(AppAdm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
