@@ -1,7 +1,8 @@
 export interface VehicleData {
+  id: number,
   odometro: number
   nivelCombustivel: number
-  status: string
+  status: 'on' | 'off'
   lat: number
   long: number
 }

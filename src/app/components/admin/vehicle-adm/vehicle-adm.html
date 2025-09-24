@@ -27,18 +27,18 @@
               @for (vehicle of vehicles; track vehicle.id;) {
               <option value="{{vehicle.id}}">{{vehicle.vehicle}}</option>
               }
-              <option value="sd">sdasd</option>
             </select>
           </div>
         </fieldset>
       </form>
 
+      @if (selectedVehicle !== null) {
       <section class="car-data-section" aria-label="Dados do carro">
         <div class="car-data-top" aria-label="car-data-top">
           <div>
             <h2>Total de vendas</h2>
             <div>
-              <p>1500</p>
+              <p>{{selectedVehicle.volumetotal}}</p>
               <span>Und.</span>
             </div>
           </div>
@@ -46,7 +46,7 @@
           <div class="">
             <h2>Conectados</h2>
             <div>
-              <p>500</p>
+              <p>{{selectedVehicle.connected}}</p>
               <span>
                 Uni.
               </span>
@@ -56,7 +56,7 @@
           <div class="">
             <h2>Update Software</h2>
             <div>
-              <p>750</p>
+              <p>{{selectedVehicle.softwareUpdates}}</p>
               <span>Uni.</span>
             </div>
           </div>
@@ -64,12 +64,13 @@
         </div>
         <div class="car-image-container" aria-label="Car image">
           <span aria-label="id">394830#929FD</span>
-          <img src="https://www.thedrive.com/wp-content/uploads/2022/09/15/ford-mustang-2024.jpeg?auto=webp" alt="" />
+          <!--<img src="https://www.thedrive.com/wp-content/uploads/2022/09/15/ford-mustang-2024.jpeg?auto=webp" alt="" />-->
+          <img src="{{selectedVehicle.img_local}}" alt="">
         </div>
         <div class="car-datas">
           <div>
             <h2>modelo</h2>
-            <p>Mustang Dark Horse</p>
+            <p>{{selectedVehicle.vehicle}}</p>
           </div>
           <div>
             <h2>ano</h2>
@@ -97,6 +98,7 @@
           </div>
         </div>
       </section>
+      }
     </article>
     <dialog class="dashboard-form-container">
       <h1>Novo veículo</h1>
