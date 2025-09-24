@@ -22,10 +22,12 @@
         <fieldset>
           <div>
             <label for="cars">Carros da Ford</label>
-            <select name="cars" id="cars" aria-label="Carros da Ford">
-              <option value="394830#929FD">Mustang 2025</option>
-              <option value="394830#929FE">Mustang 2026</option>
-              <option value="394830#929FF">Mustang 2027</option>
+            <select name="cars" id="cars" aria-label="Carros da Ford" (change)="loadCar($event)">
+              <option value="" disabled selected>Selecione um veículo</option>
+              @for (vehicle of vehicles; track vehicle.id;) {
+              <option value="{{vehicle.id}}">{{vehicle.vehicle}}</option>
+              }
+              <option value="sd">sdasd</option>
             </select>
           </div>
         </fieldset>

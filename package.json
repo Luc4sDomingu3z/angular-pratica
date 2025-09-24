@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:projeto-angular-app": "node dist/projeto-angular-app/server/server.mjs"
+    "serve:ssr:projeto-angular-app": "node src/server.ts"
   },
   "prettier": {
     "printWidth": 100,
