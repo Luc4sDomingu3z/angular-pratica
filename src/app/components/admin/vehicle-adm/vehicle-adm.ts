@@ -107,7 +107,6 @@ export class VehicleAdm {
 
   loadCar(e: Event) {
     const select: HTMLSelectElement = e.target as HTMLSelectElement
-    console.log(select.value);
     if (select === null) return
 
     const value = select.value
@@ -120,11 +119,10 @@ export class VehicleAdm {
     if (this.selectedVehicle !== null) {
       for (let data of this.vehicleData) {
         if (this.selectedVehicle.id === data.id) {
-
+          this.carVin = data
         }
       }
     }
-    console.log(this.selectedVehicle)
   }
 
   // selectCarForms = new FormGroup({

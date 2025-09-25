@@ -1,5 +1,5 @@
 export interface CarroVin {
-  id: string,
+  id: number,
   odometro: number,
   nivelCombustivel: number,
   status: string,
